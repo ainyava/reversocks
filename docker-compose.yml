@@ -1,0 +1,10 @@
+services:
+  reversocks:
+    image: ainyava/reversocks
+    container_name: reversocks
+    build: .
+    network_mode: host
+    environment:
+      - PORT=8080
+      - REMOTE=https://example.com
+      - PROXY=localhost:2080
